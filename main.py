@@ -53,7 +53,6 @@ for path, im, im0s, vid_cap, s in dataset:
 
     # Inference
     with dt[1]:
-        im = cv2.rotate(im, cv2.ROTATE_90_COUNTERCLOCKWISE)
         pred = model(im, augment=False, visualize=False)
 
     # NMS
